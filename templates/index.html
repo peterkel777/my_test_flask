@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/736x/58/7e/bd/587ebda78a5ee2212b2535534ffcfda0.jpg" alt="">
+    <div id="remove_items">
+        <form action="/remove_items" method="POST">
+            {% for item in shopping_list %}
+            <input type="checkbox" name="check" id="{{item}}" value="{{item}}" onchange="btn_act('{{item}}')">
+            <label for="{{item}}" name="{{item}}">{{item}}</label><br>
+            {% endfor %}
+            <input class="btn" type="submit" value="Törlés" id="remove_btn">
+        </form>
+    </div>
+
+
+    <div id="add_item">
+        <form action="/add_items" method="POST">
+            <select name="select_items">
+                {% for fruit in fruits %}
+                    <option value="{{ fruit }}">{{ fruit }}</option>
+                {% endfor %}                        
+            <input class="btn" type="submit" value="Új gyümölcs" id="add_btn">
+        </form>
+    </div>
+</body>
+</html>

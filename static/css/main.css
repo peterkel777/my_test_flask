@@ -1,0 +1,66 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+img {
+    /* width: 400px; */
+    height: 200px;
+    padding: 0px 20px 0px 20px;
+}
+
+label {
+    margin: 25px 5px;
+}
+
+#remove_items {
+    background-color: lightgray;
+    color: darkslategray;
+    padding: 20px;
+}
+
+.btn {
+    border-radius: 20px;
+    border: 2px solid darkgrey;
+    margin: 5px 30px;
+    padding: 10px;
+    width: 200px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+#add_btn {
+    background-color:darkcyan;
+    color: white;
+}
+
+#add_btn:hover {
+    background-color:darkslategrey;
+    color: white;
+}
+
+#remove_btn {
+    background-color: lightgray;
+    color: white;
+}
+#remove_btn:hover {
+    cursor: auto;
+}
+
+select {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid darkgrey;
+}
+
+select:hover {
+    cursor: pointer;
+}
